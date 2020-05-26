@@ -1,0 +1,89 @@
+<script src="onYourMark.js"></script>
+<style>
+    #resume h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #resume h2 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    #resume h3 {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #resume {
+        padding: 10%;
+        font-family: 'Noto Serif', serif;
+    }
+
+    #resume blockquote {
+        text-align: center;
+        font-style: italic;
+    }
+
+    @media print {
+
+        #pageHeader,
+        #control,
+        #detail,
+        #readme,
+        footer,
+        #dummy {
+            display: none;
+        }
+
+        #minionBlock {
+            visibility: hidden;
+        }
+
+        #resume.card-body {
+            visibility: visible;
+            padding: unset;
+        }
+
+        .card,
+        blockquote {
+            border: none;
+        }
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 2cm;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+    }
+</style>
+<div id="control" class="sticky mb-2 collapse">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border">
+        <a class="navbar-brand d-block d-lg-none" href="#">
+            <i class="far fa-file"></i>
+            Make your resume
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+        </div>
+    </nav>
+</div>
+<div class="card mb-3 collapse" id="detail">
+    <div class="card-body"></div>
+</div>
+<div id="minionBlock" hidden>
+    <div class="card mb-3">
+        <div class="card-body" id="resume">
+            <blockquote>Give me file la~</blockquote>
+        </div>
+    </div>
+</div>

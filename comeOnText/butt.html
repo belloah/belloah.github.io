@@ -1,0 +1,102 @@
+<script src="comeOnText.js"></script>
+<div class="card mb-3">
+    <div class="card-header d-flex">
+        <div class="mr-auto lead">Configuration</div>
+        <a href="#" class="border-0 btn" role="button" data-toggle="collapse" data-target="#switch" aria-expanded="true" aria-controls="switch" id="config"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <div class="card-body collapse show" id="switch">
+        <div class="form-group d-flex flex-column flex-sm-row">
+            <div class="pr-3">Button mode:</div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="separated" name="buttonMode" class="custom-control-input" value=".sSet">
+                <label class="custom-control-label" for="separated">Papoy</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="paste" name="buttonMode" class="custom-control-input" value=".pSet">
+                <label class="custom-control-label" for="paste">Gelato</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="copy" name="buttonMode" class="custom-control-input" value=".cSet">
+                <label class="custom-control-label" for="copy">Para tu</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="one" name="buttonMode" class="custom-control-input" value=".oSet" checked>
+                <label class="custom-control-label" for="one">Banana</label>
+            </div>
+        </div>
+        <div class="form-group d-flex flex-column flex-sm-row">
+            <div class="pr-3">Feature:</div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="all">
+                <label class="custom-control-label" for="all">All</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input act" id="line">
+                <label class="custom-control-label" for="line">Line break removeval</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input act" id="space">
+                <label class="custom-control-label" for="space">Space removeval</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input act" id="full">
+                <label class="custom-control-label" for="full">Punctuations</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="art">
+                <label class="custom-control-label" for="art">Collect bananas?</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="banana">Put banana here:</label>
+    <textarea class="form-control" id="banana" style="height: 15vh;"></textarea>
+</div>
+
+<div class="sSet buttonSet row pb-3" hidden>
+    <div class="col-sm-4 py-1">
+        <button class="btn btn-secondary btn-block" type="button" onclick="pasteBanana()">Banana!</button>
+    </div>
+    <div class="col-sm-4 py-1 px-sm-0">
+        <button class="btn btn-secondary btn-block" type="button" onclick="roger()">Roger!</button>
+    </div>
+    <div class="col-sm-4 py-1">
+        <button class="btn btn-secondary btn-block" type="button" onclick="eatBanana()">Eat banana!</button>
+    </div>
+</div>
+<div class="pSet buttonSet pb-3" hidden>
+    <div class="py-1">
+        <button class="btn btn-secondary btn-block" type="button" onclick="gelato()">Gelato!</button>
+    </div>
+</div>
+<div class="row cSet buttonSet pb-3" hidden>
+    <div class="col-sm-4 py-1">
+        <button class="btn btn-secondary btn-block" type="button" onclick="pasteBanana()">Banana!</button>
+    </div>
+    <div class="col-sm-4 py-1 px-sm-0">
+        <button class="btn btn-secondary btn-block" type="button" onclick="paraTu()">Para tu</button>
+    </div>
+    <div class="col-sm-4 py-1">
+        <button class="btn btn-secondary btn-block" type="button" onclick="eatBanana()">Eat banana!</button>
+    </div>
+</div>
+<div class="oSet buttonSet pb-3">
+    <div class="py-1">
+        <button class="btn btn-secondary btn-block" type="button" onclick="goBanana()">Go banana!</button>
+    </div>
+</div>
+
+<div class="form-group" style="position: relative;">
+    <label for="minion">Here is response from the minion:</label>
+    <textarea class="form-control" id="minion" style="height: 15vh;" readonly></textarea>
+    <button class="btn" style="position: absolute; bottom: 15px; right: 15px;" type="button" onclick="dadaBanana()"
+        data-toggle="modal" data-target="#dada"><i class="fas fa-expand-alt"></i></button>
+</div>
+
+<div class="form-group sSet pSet buttonSet" hidden>
+    <button class="btn btn-success form-control" type="button" onclick="thankYouMinion()">Say Thank you to minion and take it away</button>
+</div>
