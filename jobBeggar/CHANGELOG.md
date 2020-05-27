@@ -1,5 +1,12 @@
 # Release Notes
 
+## ver 1.3
+
+May 27, 2020
+
+- Changed complimentary closes of content in English
+- Added configuration for Eat banana button
+
 ## ver 1.2
 
 May 19, 2020
