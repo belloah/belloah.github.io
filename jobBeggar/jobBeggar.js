@@ -119,4 +119,7 @@ function stackBanana() {
         stack += buildBanana(bananas[banana]);
     }
     $("#stack").html(stack);
+    $('#stop input[type=checkbox]').change(function () {
+            $(this.value).toggleClass("banana");
+    });
 }
