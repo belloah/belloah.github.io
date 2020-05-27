@@ -55,12 +55,19 @@ function content() {
     return "";
 }
 function eContent(banana) {
-    if (banana.recipent == "") banana.recipent = "Dear Sir/Madam,";
-    else banana.recipent = "Dear " + banana.recipent + ",";
+    let close = "";
+    if (banana.recipent == "") {
+        banana.recipent = "Dear Sir/Madam,";
+        close = "faithfully";
+    }
+    else {
+        banana.recipent = "Dear " + banana.recipent + ",";
+        close = "sincerely";
+    }
 
     var content = "我係 content 啊";
 
-    content = banana.recipent + "\r\n\r\nI am writing to apply for the position of " + banana.position + " advertised on " + banana.source + " (" + banana.link + ").\r\n\r\nEnclosed is a copy of my resume which provides details of my qualifications for the position. I would appreciate the opportunity to meet with you to discuss my interest and qualifications. I look forward to hearing from you soon.\r\n\r\nThank you for your time and consideration.\r\n\r\nYours faithfully,\r\n" + banana.name;
+    content = banana.recipent + "\r\n\r\nI am writing to apply for the position of " + banana.position + " advertised on " + banana.source + " (" + banana.link + ").\r\n\r\nEnclosed is a copy of my resume which provides details of my qualifications for the position. I would appreciate the opportunity to meet with you to discuss my interest and qualifications. I look forward to hearing from you soon.\r\n\r\nThank you for your time and consideration.\r\n\r\nYours " + close + ",\r\n" + banana.name;
     $("#content").val(content);
     return content;
 }
