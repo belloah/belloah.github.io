@@ -20,7 +20,10 @@ $('#all').change(function () {
     $('input.act').prop('checked', this.checked);
 });
 $("#art").change(function () {
-    banana = "";
+    bananas = "";
+});
+$('#line').change(function () {
+    $('#aSpace').prop('disabled',!$('#line').is(':checked'))
 });
 $('#switch').on('hide.bs.collapse', function () {
     $('#config').html('<i class="fas fa-angle-down"></i>');
@@ -82,7 +85,10 @@ function giveBanana(banana = $('#banana').val()) {
 
 // add functions for Chinese
 function lineBreak(banana) {
-    return banana.replace(/(\r\n|\n|\r)/gm, "");
+    if ($('#aSpace').is(':checked'))
+        return banana.replace(/(\r\n|\n|\r)/gm, " ");
+    else
+        return banana.replace(/(\r\n|\n|\r)/gm, "");
 }
 function space(banana) {
     return banana.split(' ').join('');
